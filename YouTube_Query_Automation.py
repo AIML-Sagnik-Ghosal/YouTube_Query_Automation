@@ -8,7 +8,7 @@ import os
 import datetime as dt
 service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
-topic="deep learning"
+topic=input()
 driver.get("https://www.youtube.com/results?search_query="+topic.replace(' ','+'))
 bs=driver.find_elements(By.TAG_NAME,"ytd-video-renderer")
 d=pd.DataFrame(columns=['Query No','Query','Video No','Title','Views','Channel',
